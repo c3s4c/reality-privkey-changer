@@ -8,7 +8,7 @@ while True:
     ii=0
 
     def getPrivKey():
-        return subprocess.check_output("xray x25519").decode().split(": ")[1].split("\n")[0]
+        return subprocess.check_output("xray x25519",shell=True).decode().split(": ")[1].split("\n")[0]
 
     def getShortId():
         return secrets.token_hex(8)
